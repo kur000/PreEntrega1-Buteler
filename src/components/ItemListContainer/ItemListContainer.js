@@ -1,19 +1,37 @@
 import ItemList from '../ItemList/ItemList'
-import { getMerch } from '../../asyncMockn'
-import { useState } from 'react'
-import { useEffect } from 'react'
+import { getCategory, getMerch } from '../../asyncMock'
+import { useState, useEffect } from 'react'
+import { useParams } from 'react-router-dom'
 
  
 const ItemListContainer = ({ greeting }) => {
 
     const [items, setItems] = useState([])
 
+    const { categoryId } = useParams()
+
     useEffect(() => {
-        getMerch()
+        if(categoryId){            
+            getCategory(categoryId)
             .then(response => {
                 setItems(response)
             })
-    }, []);
+            .catch(error => {
+                console.log(error)
+            })
+        } else {
+            getMerch()
+            .then(response => {
+                setItems(response)
+            })
+            .catch(error => {
+                console.log(error)
+            })
+        }
+    }, [categoryId])
+    
+
+
 
     return (
         <div>
