@@ -33,7 +33,7 @@ const merch = [
       category: 'comics' ,
       description: 'descripcion prod 4',
       price: '500',
-      pictureUrl: ''
+      pictureUrl: 'https://upload.wikimedia.org/wikipedia/commons/6/65/Watchmen-cover.svg'
     },
 
     {
@@ -42,7 +42,7 @@ const merch = [
       category: 'comics' ,
       description: 'descripcion prod 5',
       price: '500',
-      pictureUrl: ''
+      pictureUrl: 'https://img.huffingtonpost.com/asset/5bb617a3240000510056a01f.jpeg?ops=scalefit_720_noupscale'
     }
   ]
   
