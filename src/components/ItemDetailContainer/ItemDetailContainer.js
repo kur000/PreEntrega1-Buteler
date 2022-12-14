@@ -14,6 +14,7 @@ const ItemDetailContainer = () => {
                 setDetail(response))
             .catch(error => console.log(error))
     }, [productId]);
+    
     return (
         <div>
             <h1>{detail.title}</h1>

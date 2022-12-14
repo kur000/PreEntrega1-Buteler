@@ -10,8 +10,6 @@ const Navbar = (props) => {
                 <Link to='category/comics'><Button>Comics</Button></Link>
                 <Link to='category/mangas'><Button>Mangas</Button></Link>
                 <Link to='category/merch'><Button>Merch</Button></Link>
-                
-                
                 <CartWidget/>
             </nav>
 }
